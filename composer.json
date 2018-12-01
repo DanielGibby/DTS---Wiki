@@ -27,7 +27,8 @@
         "drupal/search_api_location": "^1.0@alpha",
         "drupal/config_split": "^1.4",
         "drupal/recaptcha": "^2.3",
-        "drupal/webform": "^5.0"
+        "drupal/webform": "^5.0",
+        "drupal/tb_megamenu": "1.x-dev"
     },
     "replace": {
         "drupal/core": "^8.6"
