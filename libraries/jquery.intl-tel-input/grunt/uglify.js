@@ -16,15 +16,13 @@ module.exports = function(grunt) {
         preserveComments: true
       },
       files: {
-        'build/js/intlTelInput.js': 'tmp/wrapped.js',
-        'build/js/intlTelInput-jquery.js': 'tmp/wrapped-jquery.js',
+        'build/js/intlTelInput.js': 'tmp/wrapped.js'
       }
     },
     prod: {
       files: {
-        'tmp/wrapped.min.js': 'tmp/wrapped.js',
-        'tmp/wrapped-jquery.min.js': 'tmp/wrapped-jquery.js',
+        'tmp/wrapped.min.js': 'tmp/wrapped.js'
       }
-    },
+    }
   };
 };

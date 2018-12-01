@@ -1,10 +1,10 @@
-#### IMPORTANT: since v14 we have removed the jQuery dependency. See below for how to initialise and use the plugin with pure JavaScript. If you want to stick with the jQuery version, there is now a separate jQuery wrapped version.
+#### IMPORTANT: since v14 we have removed the jQuery dependency. See below for how to initialise and use the plugin with pure JavaScript. If you want to stick with the jQuery version, stick with v13.
 ---
 
-# International Telephone Input [![Build Status](https://travis-ci.org/jackocnr/intl-tel-input.svg?branch=master)](https://travis-ci.org/jackocnr/intl-tel-input)
+# International Telephone Input [![Build Status](https://travis-ci.org/jackocnr/intl-tel-input.svg)](https://travis-ci.org/jackocnr/intl-tel-input)
 A JavaScript plugin for entering and validating international telephone numbers. It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder and provides formatting/validation methods.
 
-<img src="https://raw.github.com/jackocnr/intl-tel-input/master/screenshots/vanilla.png" width="424px" height="246px">
+<img src="https://raw.github.com/jackocnr/intl-tel-input/master/screenshot.png" width="424px" height="246px">
 
 If you like it, please consider making a donation, which you can do from [the demo page](http://intl-tel-input.com).
 
@@ -186,7 +186,7 @@ Prevent the user from entering invalid characters. Unfortunately this had to be 
 Type: `Boolean` Default: `false`  
 Display the country dial code next to the selected flag so it's not part of the typed number. Note that this will disable `nationalMode` because technically we are dealing with international numbers, but with the dial code separated.
 
-<img src="https://raw.github.com/jackocnr/intl-tel-input/master/screenshots/separateDialCode.png" width="257px" height="46px">
+<img src="https://raw.github.com/jackocnr/intl-tel-input/master/separateDialCodeScreenshot.png" width="257px" height="46px">
 
 **utilsScript**  
 Type: `String` Default: `""` Example: `"build/js/utils.js"`  
@@ -337,9 +337,9 @@ The utilities script ([build/js/utils.js](build/js/utils.js)) is a custom build 
 * Placeholder set to an example number for the selected country - even specify the type of number (e.g. mobile) using the `placeholderNumberType` option
 * Extract the standardised (E.164) international number with `getNumber` even when using the `nationalMode` option
 
-International number formatting/validation is hard (it varies by country/district, and we currently support ~230 countries). The only comprehensive solution I have found is libphonenumber, from which I have precompiled the relevant parts into a single JavaScript file and included in the build directory. Unfortunately even after minification it is still ~215KB, but if you use the `utilsScript` option then it will only fetch the script when the page has finished loading (to prevent blocking). If size is not a concern, then you can manually include the script yourself however you like, and as long as it has loaded before you initialise the plugin then it should work fine.
+International number formatting/validation is hard (it varies by country/district, and we currently support ~230 countries). The only comprehensive solution I have found is libphonenumber, from which I have precompiled the relevant parts into a single JavaScript file and included in the lib directory. Unfortunately even after minification it is still ~215KB, but if you use the `utilsScript` option then it will only fetch the script when the page has finished loading (to prevent blocking). If size is not a concern, then you can manually include the script yourself however you like, and as long as it has loaded before you initialise the plugin then it should work fine.
 
-To recompile the utils script yourself (e.g. to update the version of libphonenumber it is built from), see the [contributing guide](https://github.com/jackocnr/intl-tel-input/blob/master/.github/CONTRIBUTING.md#updating-to-a-new-version-of-libphonenumber).
+To recompile the utilities script yourself, see the comments at the top of [src/js/utils.js](src/js/utils.js).
 
 
 ## Troubleshooting
@@ -379,7 +379,7 @@ _Note: there is currently [a bug](https://bugs.webkit.org/show_bug.cgi?id=141822
 
 
 ## Contributing
-See the [contributing guide](https://github.com/jackocnr/intl-tel-input/blob/master/.github/CONTRIBUTING.md) for instructions on setting up the project and making changes, and also for how to update to a new version of libphonenumber, or how to update the flag images.
+See the [contributing guide](https://github.com/jackocnr/intl-tel-input/blob/master/.github/CONTRIBUTING.md).
 
 
 ## Attributions

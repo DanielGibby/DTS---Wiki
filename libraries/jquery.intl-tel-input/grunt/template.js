@@ -6,13 +6,15 @@ module.exports = function(grunt) {
   return {
 
     // this is the first step in generating the actual plugin main JS file
-    jsAddVersion: {
-      src: 'src/js/intlTelInput.js',
-      dest: 'tmp/versioned.js',
+    js: {
+      src: 'src/js/wrapper.js.ejs',
+      dest: 'tmp/wrapped.js',
       options: {
         data: (function(version) {
           return {
+            plugin: grunt.file.read('src/js/intlTelInput.js'),
             version: version,
+            data: grunt.file.read('src/js/data.js')
           };
         })('<%= package.version %>')
       }
