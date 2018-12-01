@@ -1,0 +1,109 @@
+<div id="i-back-to-top" class="c-back-to-top">
+	<a href="#">Back to top</a>
+</div>
+
+<footer role="contentinfo">
+	<div class="pre-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<h1>{{ contact_info_title }}</h1>
+					{% if telephone_number|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-telephone">
+						<div class="c-icon-holder"><i class="fa fa-phone" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ telephone_number }}</div>
+					</div>
+					{% endif %}
+					{% if email_address|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-email">
+						<div class="c-icon-holder"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+						<div class="c-text-holder"><a href="mailto:{{ email_address }}">{{ email_address }}</a></div>
+					</div>
+					{% endif %}
+					{% if postal_address|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-postal-address">
+						<div class="c-icon-holder"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ postal_address|raw }}</div>
+					</div>
+					{% endif %}
+					{% if find_jsc|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-address">
+						<div class="c-icon-holder"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ find_jsc|raw }}</div>
+					</div>
+					{% endif %}
+					{% if contact_jsc|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-address">
+						<div class="c-icon-holder"><i class="fa fa-phone" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ contact_jsc|raw }}</div>
+					</div>
+					{% endif %}
+					{% if physical_address|raw|trim|length != 0 %}
+					<div class="c-contact-us-generic c-address">
+						<div class="c-icon-holder"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ physical_address|raw }}</div>
+					</div>
+					{% endif %}
+				</div>
+				<div class="col-lg-8 col-md-6 col-sm-12">
+					<h1>{{ enquire_title }}</h1>
+					<div class="c-contact-us-generic c-postal-address">
+						<div class="c-icon-holder"><i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ enquire_section|raw }}</div>
+					</div>
+					<div class="c-contact-us-generic c-postal-address">
+						<div class="c-icon-holder"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+						<div class="c-text-holder">{{ feedback_section|raw }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-footer-social-media">
+		<div class="c-social-container">
+			{% if twitter %}
+			<div class="c-social-generic c-twitter"><a href="{{ twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="c-hide-text">Twitter</span></a></div>
+			{% endif %}
+			{% if facebook %}
+			<div class="c-social-generic c-facebook"><a href="{{ facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="c-hide-text">Facebook</span></a></div>
+			{% endif %}
+			{% if linked_in %}
+			<div class="c-social-generic c-lined-in"><a href="{{ linked_in }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="c-hide-text">Linked In</span></a></div>
+			{% endif %}
+			{% if youtube %}
+			<div class="c-social-generic c-youtube"><a href="{{ youtube }}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i><span class="c-hide-text">YouTube</span></a></div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="c-footer">
+    <div class="c-acknowledgement">
+      <p>
+        The Department of Training and Workforce Development acknowledges the Aboriginal peoples of Western Australia as traditional custodians of the lands and waters.<br />
+        It honours their wisdom, cultures, languages, and communities, and pays respect to the Elders, past and present.
+      </p>
+    </div>
+    <div class="c-wa-gov-link col-md-3"><a href="{{ wa_gov_au }}" target="_blank">wa.gov.au</a></div>
+		<div class="c-cwe-footer-links-container col-md-6">
+			<nav class="c-cwe-footer-links">
+				<ul>
+					<li><a href="/">Home</a></li>
+					{% if privacy %}
+					<li><a href="{{ privacy }}">Privacy</a></li>
+					{% endif %}
+					{% if disclaimer %}
+					<li><a href="{{ disclaimer }}">Disclaimer</a></li>
+					{% endif %}
+					{% if copyright %}
+					<li><a href="{{ copyright }}">Copyright</a></li>
+					{% endif %}
+					{% if complaints %}
+					<li><a href="{{ complaints }}">Complaints</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		</div>
+    <div class="c-copyright col-md-12">
+      <p>All contents &copy; Government of Western Australia {{ "now"|date("Y") }}. All rights reserved.</p>
+    </div>
+	</div>
+</footer>

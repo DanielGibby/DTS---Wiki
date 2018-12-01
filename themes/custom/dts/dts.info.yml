@@ -1,0 +1,12 @@
+name: DTS Development Theme
+type: theme
+description: 'This theme will have all the features offered for websites created and maintained by Digital Training Services.'
+core: 8.x
+libraries:
+  - dts/global-styling
+base theme: classy
+regions:
+  header: Header
+  menu: Menu
+  content: Content
+  footer: Footer
